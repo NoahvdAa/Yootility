@@ -22,11 +22,10 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace
       - name: capture build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: Yootility Artifacts
-          # Don't copy the sources artifact, only the minecraft-compatible one.
           path: |
-            api/build/libs*.jar
+            api/build/libs/*.jar
