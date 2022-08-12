@@ -1,0 +1,10 @@
+name: YootilityTestPlugin
+main: me.noahvdaa.yootility.testplugin.YootilityTestPlugin
+version: ${version}
+author: NoahvdAa
+api-version: 1.19
+commands:
+  yootilitytestephemeral:
+    description: Performs a one-time action
+  friendrequest:
+    description: Sends a fake friend request
