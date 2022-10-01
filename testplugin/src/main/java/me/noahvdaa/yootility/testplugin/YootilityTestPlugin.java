@@ -11,6 +11,7 @@ public class YootilityTestPlugin extends JavaPlugin {
     public void onEnable() {
         this.ephemeralCommandManager = EphemeralCommandManager.ephemeralCommandManager(this.getCommand("yootilitytestephemeral"));
         this.getCommand("friendrequest").setExecutor(new FriendRequestCommand(this));
+        this.getCommand("minimessage").setExecutor(new MiniMessageCommand());
     }
 
     public EphemeralCommandManager getEphemeralCommandManager() {
