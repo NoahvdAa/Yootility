@@ -1,4 +1,4 @@
-package me.noahvdaa.yootility.ephemeralcommands;
+package me.noahvdaa.yootility.ephemeralcommand;
 
 import me.noahvdaa.yootility.validation.FormatRegexes;
 import org.bukkit.command.Command;

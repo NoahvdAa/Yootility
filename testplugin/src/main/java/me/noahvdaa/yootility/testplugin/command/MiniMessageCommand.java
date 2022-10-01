@@ -1,4 +1,4 @@
-package me.noahvdaa.yootility.testplugin;
+package me.noahvdaa.yootility.testplugin.command;
 
 import me.noahvdaa.yootility.spacingfont.SpacingFont;
 import me.noahvdaa.yootility.spacingfont.SpacingFontTagResolver;

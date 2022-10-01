@@ -1,4 +1,4 @@
-package me.noahvdaa.yootility.ephemeralcommands;
+package me.noahvdaa.yootility.ephemeralcommand;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

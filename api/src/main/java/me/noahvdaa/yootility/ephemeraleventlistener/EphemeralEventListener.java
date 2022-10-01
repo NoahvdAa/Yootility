@@ -1,4 +1,4 @@
-package me.noahvdaa.yootility.ephemeraleventlisteners;
+package me.noahvdaa.yootility.ephemeraleventlistener;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;

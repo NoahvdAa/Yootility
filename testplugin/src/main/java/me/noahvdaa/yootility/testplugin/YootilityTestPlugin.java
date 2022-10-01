@@ -1,6 +1,8 @@
 package me.noahvdaa.yootility.testplugin;
 
-import me.noahvdaa.yootility.ephemeralcommands.EphemeralCommandManager;
+import me.noahvdaa.yootility.ephemeralcommand.EphemeralCommandManager;
+import me.noahvdaa.yootility.testplugin.command.FriendRequestCommand;
+import me.noahvdaa.yootility.testplugin.command.MiniMessageCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class YootilityTestPlugin extends JavaPlugin {

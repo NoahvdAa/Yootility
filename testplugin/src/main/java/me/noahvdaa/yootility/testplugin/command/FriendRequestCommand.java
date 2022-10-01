@@ -1,9 +1,10 @@
-package me.noahvdaa.yootility.testplugin;
+package me.noahvdaa.yootility.testplugin.command;
 
-import me.noahvdaa.yootility.ephemeralcommands.EphemeralCommand;
-import me.noahvdaa.yootility.ephemeralcommands.EphemeralCommandManager;
-import me.noahvdaa.yootility.ephemeralcommands.EphemeralCommandSet;
-import me.noahvdaa.yootility.ephemeraleventlisteners.EphemeralEventListener;
+import me.noahvdaa.yootility.ephemeralcommand.EphemeralCommand;
+import me.noahvdaa.yootility.ephemeralcommand.EphemeralCommandManager;
+import me.noahvdaa.yootility.ephemeralcommand.EphemeralCommandSet;
+import me.noahvdaa.yootility.ephemeraleventlistener.EphemeralEventListener;
+import me.noahvdaa.yootility.testplugin.YootilityTestPlugin;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.format.NamedTextColor;
