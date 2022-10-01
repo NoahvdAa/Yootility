@@ -2,6 +2,9 @@ package me.noahvdaa.yootility.validation;
 
 import java.util.regex.Pattern;
 
+/**
+ * Contains {@link Pattern}s for common formats.
+ */
 public final class FormatRegexes {
 
     private FormatRegexes() {
@@ -18,6 +21,6 @@ public final class FormatRegexes {
     /**
      * Matches a UUID containing either dashes or no dashes, e.g. 00000000-0000-0000-0000-000000000000 and 00000000000000000000000000000000.
      */
-    public static final Pattern UUID = Pattern.compile("^(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(?:[0-9a-fA-F]{32})$");
+    public static final Pattern UUID = Pattern.compile("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}$");
 
 }

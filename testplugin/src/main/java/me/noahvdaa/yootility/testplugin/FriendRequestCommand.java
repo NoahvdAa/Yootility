@@ -30,24 +30,23 @@ public record FriendRequestCommand(YootilityTestPlugin plugin) implements Comman
         EphemeralCommandManager cm = plugin.getEphemeralCommandManager();
         EphemeralCommandSet set = EphemeralCommandSet.empty();
 
-        EphemeralEventListener<PlayerQuitEvent> leaveListener = EphemeralEventListener.automaticallyUnregistering(PlayerQuitEvent.class, (p) -> p.getPlayer() == player, (e) -> cm.removeSet(set));
-        leaveListener.register(plugin);
+        EphemeralEventListener<PlayerQuitEvent> leaveListener = EphemeralEventListener.automaticallyUnregistering(PlayerQuitEvent.class, (p) -> p.getPlayer() == player, (e) -> cm.removeSet(set)).register(plugin);
 
         set.add(
                 EphemeralCommand.named("accept", (clicker) -> {
                     clicker.sendMessage(Component.text("Accepted the friend request!", NamedTextColor.GREEN));
                     cm.removeSet(set); // the other actions should no longer do anything, unregister.
-                    leaveListener.unregister(plugin);
+                    leaveListener.unregister();
                 }),
                 EphemeralCommand.named("deny", (clicker) -> {
                     clicker.sendMessage(Component.text("Denied the friend request!", NamedTextColor.RED));
                     cm.removeSet(set); // the other actions should no longer do anything, unregister.
-                    leaveListener.unregister(plugin);
+                    leaveListener.unregister();
                 }),
                 EphemeralCommand.named("ignore", (clicker) -> {
                     clicker.sendMessage(Component.text("Ignored the friend request!", NamedTextColor.GRAY));
                     cm.removeSet(set); // the other actions should no longer do anything, unregister.
-                    leaveListener.unregister(plugin);
+                    leaveListener.unregister();
                 })
         );
         UUID setUUID = cm.addSet(set);
@@ -60,10 +59,6 @@ public record FriendRequestCommand(YootilityTestPlugin plugin) implements Comman
                         .append(Component.text("[ignore] ", NamedTextColor.GRAY, TextDecoration.BOLD).clickEvent(ClickEvent.runCommand(baseCommand + "ignore")))
         );
         return true;
-    }
-
-    private Component spacer(int length) {
-        return Component.text("".repeat(length));
     }
 
 }
