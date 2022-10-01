@@ -8,3 +8,5 @@ commands:
     description: Performs a one-time action
   friendrequest:
     description: Sends a fake friend request
+  minimessage:
+    description: Parses the specified MiniMessage string
